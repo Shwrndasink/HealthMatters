@@ -73,35 +73,54 @@
 									<div class="modal-body">
 										<form class="form-horizontal" id="modalBody">
 											<div class="fm-wrapper">
-											<div class="form-group">
-												<label for="firstName" class="col-sm-3 control-label">Firstname</label>
-												<div class="col-sm-9">
-													<input type="text" class="form-control first-name" id="firstName" placeholder="Firstname">
+												<div class="alert alert-danger form-fail-alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Please fill out all information</div>
+												<div class="form-group">
+													<label for="phoneNumber" class="col-sm-3 control-label" required>Phone Number</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control phone-number" id="phoneNumber" placeholder="xxx-xxx-xxxx">
+													</div>
 												</div>
-											</div>
-											<div class="form-group">
-												<label for="lastName" class="col-sm-3 control-label">Lastname</label>
-												<div class="col-sm-9">
-													<input type="text" class="form-control last-name" id="lastName" placeholder="Lastname">
+												<div class="form-group">
+													<label for="email" class="col-sm-3 control-label" required>Email Address</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control email" id="email" placeholder="email@address.com">
+													</div>
 												</div>
-											</div>
-											<div class="form-group">
-												<label for="dob" class="col-sm-3 control-label">Date of Birth</label>
-												<div class="col-sm-9">
-													<input type="text" class="form-control d-o-b" id="dob" placeholder="mm/dd/yyyy">
+												<div class="form-group">
+													<label for="zipcode" class="col-sm-3 control-label" required>Zip Code</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control zipcode" id="zipcode" placeholder="zipcode">
+													</div>
 												</div>
-											</div>
-											<div class="form-group">
-												<label for="TobaccoUse" class="col-sm-3 control-label">Tobacco Use?</label>
-												<div class="col-sm-9">
-													<label class="radio-inline">
-														<input type="radio" name="smokeNo" id="inlineRadioYes" value="yes"> No
-													</label>
-													<label class="radio-inline">
-														<input type="radio" name="smokeYes" id="inlineRadioNo" value="No"> Yes
-													</label>
+												<div class="form-group">
+													<label for="firstName" class="col-sm-3 control-label" required>Firstname</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control first-name" id="firstName" placeholder="Firstname">
+													</div>
 												</div>
-											</div>
+												<div class="form-group">
+													<label for="lastName" class="col-sm-3 control-label" required>Lastname</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control last-name" id="lastName" placeholder="Lastname">
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="dob" class="col-sm-3 control-label">Date of Birth</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control d-o-b" id="dob" placeholder="mm/dd/yyyy">
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="TobaccoUse" class="col-sm-3 control-label">Tobacco Use?</label>
+													<div class="col-sm-9">
+														<label class="radio-inline">
+															<input type="radio" name="smokeNo" id="inlineRadioYes" value="no"> No
+														</label>
+														<label class="radio-inline">
+															<input type="radio" name="smokeYes" id="inlineRadioNo" value="yes"> Yes
+														</label>
+													</div>
+												</div>
 											<div class="form-group">
 												<label for="Gender" class="col-sm-3 control-label">Gender</label>
 												<div class="col-sm-9">
