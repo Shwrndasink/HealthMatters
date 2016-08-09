@@ -160,6 +160,9 @@ svg {
     .mobile-nav-toggle {
       display: block; } }
 
+.mobile-form {
+  padding-top: 45px; }
+
 .mobile-nav {
   display: none;
   height: 0px;

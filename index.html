@@ -87,6 +87,12 @@
 													</div>
 												</div>
 												<div class="form-group">
+													<label for="zipcode" class="col-sm-3 control-label" required>Zip Code</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control zipcode" id="zipcode" placeholder="zipcode">
+													</div>
+												</div>
+												<div class="form-group">
 													<label for="firstName" class="col-sm-3 control-label" required>Firstname</label>
 													<div class="col-sm-9">
 														<input type="text" class="form-control first-name" id="firstName" placeholder="Firstname">
@@ -147,6 +153,7 @@
 			<li><a href="about.html">About Us</a></li>
 			<li><a href="services.html">Services</a></li>
 			<li><a href="contact.html">Contact Us</a></li>
+			<li><a href="freequote.html">Free Quote</a></li>
 		</ul>
 	</div>
 	<section class="cta home-cta">
@@ -161,7 +168,7 @@
 					Health Matters
 				</h2>
 				<p>
-					Whether it is navigating your family through the ever-evolving healthcare marketplace or trying to figure out what the best type of life insurance policy fits within the needs of your family and financial liabilities, Health Matters is here to help provide affordable options to achieve your long and short term goals and provide the best protection for you and your family.
+					Whether it is navigating your family through the ever-evolving healthcare marketplace or trying to figure out the best type of life insurance policy for your family and financial liabilities, Health Matters is here to help provide affordable options to achieve your long and short term goals and provide the best protection for you and your family.
 				</p>
 			</div>
 			<div class="clearfix"> </div>
@@ -170,14 +177,14 @@
 					<div class="row">
 					<div class="col-xs-12 col-sm-4">
 						<div class="quote-blue">
-						"Finding health insurance was very confusing but luckily we were able to get Gary's help to pick out a plan and it didn't cost me anything for his help."
+							"Finding health insurance was very confusing but luckily we were able to get Gary's help to pick out a plan and it didn't cost me anything for this expertise"
 						<br>
 						<span class="pull-right">&mdash; Tara C.</span>
 						</div>
 					</div>
 					<div class="col-xs-12 col-sm-4">
 						<div class="quote-pink">
-						"I see a number of specialists and take some specialized medications to treat a chronic condition, Colby and Gary not only found a plan that worked for me financially but also one that cut the cost of prescriptions and kept all of my doctors in my network."
+							"I see a number of medical specialist and take some specialized prescriptions to treat a chronic condition. Colby and Gary not only found me a plan that worked for me financially but also one that cut the cost of prescriptions and kept all of my doctors in my network"
 						<br>
 						<span class="pull-right">&mdash; Lyle G.</span>
 						</div>
@@ -197,13 +204,7 @@
 
 	<script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
 <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyA4aruhct10zMa2q-3oswla7-nI6lYG_n8",
-    authDomain: "healthmatters-be5e0.firebaseapp.com",
-    databaseURL: "https://healthmatters-be5e0.firebaseio.com",
-    storageBucket: "healthmatters-be5e0.appspot.com",
-  };
+
   firebase.initializeApp(config);
 </script>
 	<script src="index.js" type="text/javascript"></script>

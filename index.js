@@ -58,6 +58,14 @@ $(document).ready(function(){
   $('.mobile-nav-toggle').on('click', function(){
     $('.mobile-nav').toggle();
   });
+
+  $('#addPerson').on('click', function(e){
+    var _this = $(this);
+    e.preventDefault();
+    count ++;
+    $('.mobile-form').append(newPerson);
+    //console.log(newPerson);
+  });
 });
 
 $('body').on('click', '.remove-fm', function(e){
