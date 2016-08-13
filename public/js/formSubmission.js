@@ -6,30 +6,6 @@ $('#submitInfo').on('click', function(e){
   console.log('I am logging' + formValue.length);
 });
 
-
-//Get Elements
-
-// Initialize Firebase
-
-// function writeUserData(phone, email, zip, family) {
-//
-//   var postData = {
-//     phone: phone,
-//     email: email,
-//     zip: zip,
-//     family: family
-//   }
-//
-//   // Get a key for a new Post.
-//   var newPostKey = firebase.database().ref().child('posts').push().key;
-//
-//   // Write the new post's data simultaneously in the posts list and the user's post list.
-//   var updates = {};
-//   updates['/submission/'] = postData;
-//
-//   return firebase.database().ref().update(updates);
-// }
-
 function writeUserData(phone, email, zip, family) {
   firebase.database().ref('submissions/').push({
     phone: phone,
@@ -82,7 +58,6 @@ $('#submitInfo').on('click', function(){
       }
 
       //var person = 'person' + count;
-      console.log(firstName, lastName, dateOfBirth);
       if(firstName != '' && lastName != '' & dateOfBirth != ''){
         var person = new Person(firstName, lastName, dateOfBirth, smokes, gender);
         family.push(person);
@@ -95,14 +70,10 @@ $('#submitInfo').on('click', function(){
           return false;
       }
     });
-
-    console.log(phoneNumber);
-    // console.log(phoneNumber);
-    // console.log(phoneNumber);
-    // console.log(phoneNumber);
     writeUserData(phoneNumber, emailAddress, zipcode, family);
   $('#addPerson').hide();
   $('#modalBody').html('<h3>Thank you for submitting your information</h3>' + '<p>Some will be contacting you shortly with a quote</p>');
+    $('.mobile-form').html('<div class="col-xs-12"><h3>Thank you for submitting your information</h3>' + '<p>Some will be contacting you shortly with a quote</p></div>');
   $('#submitInfo').attr('disabled', 'disabled');
 
 

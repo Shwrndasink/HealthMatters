@@ -161,7 +161,11 @@ svg {
       display: block; } }
 
 .mobile-form {
-  padding-top: 45px; }
+  padding-top: 45px;}
+
+.mobile-submit-link {
+  margin-bottom:80px;
+}
 
 .mobile-nav {
   display: none;
