@@ -3,7 +3,6 @@
 $('#submitInfo').on('click', function(e){
   var formValue = document.getElementsByClassName('fm-wrapper');
   e.preventDefault();
-  console.log('I am logging' + formValue.length);
 });
 
 function writeUserData(phone, email, zip, family) {
@@ -27,11 +26,13 @@ function Person(firstName, lastName, dob, tobaccoUse, gender){
 var family = [];
 var smokes = false;
 var gender = '';
+var validForm = true;
 
 
 // Event Listener
 $('#submitInfo').on('click', function(){
 
+  validForm = true;
   //var _this = $(this);
   var peopleList = $('.fm-wrapper');
 
@@ -61,20 +62,27 @@ $('#submitInfo').on('click', function(){
       if(firstName != '' && lastName != '' & dateOfBirth != ''){
         var person = new Person(firstName, lastName, dateOfBirth, smokes, gender);
         family.push(person);
-        console.log("Family " + family);
       } else {
           $('.form-fail-alert').show();
           setTimeout(function(){
             $('.form-fail-alert').hide();
           }, 3500);
-          return false;
+          validForm = false;
+          return validForm;
+      }
+
+      //Check to see if form Valid then send to Firebase and display success message
+      if(validForm == true){
+        writeUserData(phoneNumber, emailAddress, zipcode, family);
+        $('#addPerson').hide();
+        $('#modalBody').html('<h3>Thank you for submitting your information</h3>' + '<p>Some will be contacting you shortly with a quote</p>');
+          $('.mobile-form').html('<div class="col-xs-12"><h3>Thank you for submitting your information</h3>' + '<p>Some will be contacting you shortly with a quote</p></div>');
+        $('#submitInfo').attr('disabled', 'disabled');
       }
     });
-    writeUserData(phoneNumber, emailAddress, zipcode, family);
-  $('#addPerson').hide();
-  $('#modalBody').html('<h3>Thank you for submitting your information</h3>' + '<p>Some will be contacting you shortly with a quote</p>');
-    $('.mobile-form').html('<div class="col-xs-12"><h3>Thank you for submitting your information</h3>' + '<p>Some will be contacting you shortly with a quote</p></div>');
-  $('#submitInfo').attr('disabled', 'disabled');
+
+
+
 
 
 

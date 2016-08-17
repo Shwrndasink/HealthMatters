@@ -51,7 +51,6 @@ $(document).ready(function(){
   $('#addPerson').on('click', function(e){
     var _this = $(this);
     e.preventDefault();
-    count ++;
     $('#modalBody').append(newPerson);
     //console.log(newPerson);
   });
@@ -62,9 +61,7 @@ $(document).ready(function(){
   $('#addPerson').on('click', function(e){
     var _this = $(this);
     e.preventDefault();
-    count ++;
     $('.mobile-form').append(newPerson);
-    //console.log(newPerson);
   });
 });
 
