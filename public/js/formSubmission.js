@@ -1,5 +1,3 @@
-;
-
 $('#submitInfo').on('click', function(e){
   var formValue = document.getElementsByClassName('fm-wrapper');
   e.preventDefault();
@@ -24,16 +22,14 @@ function Person(firstName, lastName, dob, tobaccoUse, gender){
 
 /* VARIABLES */
 var family = [];
-var smokes = false;
-var gender = '';
 var validForm = true;
+var count = 1;
 
 
 // Event Listener
 $('#submitInfo').on('click', function(){
 
   validForm = true;
-  //var _this = $(this);
   var peopleList = $('.fm-wrapper');
 
   var emailAddress = $('#email').val();
@@ -42,25 +38,26 @@ $('#submitInfo').on('click', function(){
 
   /* LOOP THROUGH EACH PERSON */
     peopleList.each(function(){
+      var smokes = false;
+      var gender = 'Male';
       var _this = $(this);
       var firstName = _this.find($('.first-name')).val();
       var lastName = _this.find($('.last-name')).val();
       var dateOfBirth = _this.find($('.d-o-b')).val();
 
-      var smokeValYes = _this.find('input:radio[name=smokeYes]');
-      if(smokeValYes.is(":checked")){
+      var smokeVal = _this.find('input:radio[name=smokeYes]');
+      if(smokeVal.is(":checked")){
         smokes = true;
       }
-      var genderMale = _this.find('input:radio[name=genderMale]');
-      if(genderMale.is(":checked")){
-        gender = 'Male';
-      } else {
+      var genderFind = _this.find('input:radio[name=genderFemale]');
+      if(genderFind.is(":checked")){
         gender = 'Female';
       }
 
       //var person = 'person' + count;
-      if(firstName != '' && lastName != '' & dateOfBirth != ''){
+      if(firstName != '' && lastName != '' && dateOfBirth != '' && gender != ''){
         var person = new Person(firstName, lastName, dateOfBirth, smokes, gender);
+        var uniquePerson = firstName + count;
         family.push(person);
       } else {
           $('.form-fail-alert').show();
@@ -70,18 +67,19 @@ $('#submitInfo').on('click', function(){
           validForm = false;
           return validForm;
       }
+    });
 
-      //Check to see if form Valid then send to Firebase and display success message
-      if(validForm == true){
-        writeUserData(phoneNumber, emailAddress, zipcode, family);
+    //Check to see if form Valid then send to Firebase and display success message
+    if(validForm == true){
+      writeUserData(phoneNumber, emailAddress, zipcode, family);
+      setTimeout(function(){
         $('#addPerson').hide();
         $('#modalBody').html('<h3>Thank you for submitting your information</h3>' + '<p>Some will be contacting you shortly with a quote</p>');
           $('.mobile-form').html('<div class="col-xs-12"><h3>Thank you for submitting your information</h3>' + '<p>Some will be contacting you shortly with a quote</p></div>');
         $('#submitInfo').attr('disabled', 'disabled');
-      }
-    });
+      }, 10);
 
-
+    }
 
 
 
