@@ -20,6 +20,13 @@ function Person(firstName, lastName, dob, tobaccoUse, gender){
   this.gender = gender;
 };
 
+function showError(){
+  $('.form-fail-alert').show();
+  setTimeout(function(){
+    $('.form-fail-alert').hide();
+  }, 3500);
+}
+
 /* VARIABLES */
 var family = [];
 var validForm = true;
@@ -60,17 +67,14 @@ $('#submitInfo').on('click', function(){
         var uniquePerson = firstName + count;
         family.push(person);
       } else {
-          $('.form-fail-alert').show();
-          setTimeout(function(){
-            $('.form-fail-alert').hide();
-          }, 3500);
+          showError();
           validForm = false;
           return validForm;
       }
     });
 
     //Check to see if form Valid then send to Firebase and display success message
-    if(validForm == true){
+    if(validForm == true && phoneNumber != '' && emailAddress != '' && zipcode != ''){
       writeUserData(phoneNumber, emailAddress, zipcode, family);
       setTimeout(function(){
         $('#addPerson').hide();
@@ -79,6 +83,9 @@ $('#submitInfo').on('click', function(){
         $('#submitInfo').attr('disabled', 'disabled');
       }, 10);
 
+    }
+    else {
+      showError();
     }
 
 
