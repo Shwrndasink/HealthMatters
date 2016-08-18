@@ -2,13 +2,13 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 
 var paths = {
-	css: ['sass/**/*.scss']
+	css: ['public/sass/**/*.scss']
 }
 
 gulp.task('sass', function () {
-	gulp.src('sass/**/*.scss')
+	gulp.src('public/sass/**/*.scss')
 		.pipe(sass())
-		.pipe(gulp.dest('css/'));
+		.pipe(gulp.dest('public/css/'));
 });
 
 gulp.task('watch', function(){
