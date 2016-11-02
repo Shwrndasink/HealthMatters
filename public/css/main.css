@@ -6,6 +6,9 @@
   background: #fff;
   margin: 0 auto;
   width: 100%; }
+  @media only screen and (max-width: 992px) {
+    .navbar .container {
+      width: 100%; } }
   .navbar .navbar-nav {
     margin: 27px 0px 0px 25px; }
     @media only screen and (max-width: 768px) {
@@ -18,9 +21,18 @@
         color: #2b788c; }
       .navbar .navbar-nav li a.active {
         color: #2b788c; }
-  .navbar .free-quote-button {
-    margin-right: 40px;
-    margin-top: 35px; }
+
+.free-quote-button {
+  margin-right: 40px;
+  margin-top: 35px;
+  position: relative; }
+  @media only screen and (max-width: 992px) {
+    .free-quote-button {
+      position: absolute;
+      right: -15px; } }
+
+#free-quote-links ul {
+  margin: 0; }
 
 .navbar-brand {
   padding-top: 10px; }

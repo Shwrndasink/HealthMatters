@@ -62,90 +62,15 @@
 							<i class="glyphicon glyphicon-menu-hamburger"></i>
 						</div>
 					</div>
-					<div class="pull-right free-quote-button hidden-sm hidden-xs">
+					<div class="pull-right free-quote-button hidden-xs dropdown">
 						<!-- Modal Button -->
-						<button type="button" class="btn btn-info" data-toggle="modal" data-target="#freeQuoteModal">Get a FREE Quote</button>
-						<!-- Modal -->
-						<div class="modal fade" id="freeQuoteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-							<div class="modal-dialog" role="document">
-								<div class="modal-content">
-									<div class="modal-header">
-										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-										<h4 class="modal-title" id="myModalLabel">Sign up for a FREE quote</h4>
-									</div>
-									<div class="modal-body">
-										<form class="form-horizontal" id="modalBody">
-											<div class="fm-wrapper">
-												<div class="alert alert-danger form-fail-alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Please fill out all information</div>
-												<div class="form-group">
-													<label for="phoneNumber" class="col-sm-3 control-label" required>Phone Number</label>
-													<div class="col-sm-9">
-														<input type="text" class="form-control phone-number" id="phoneNumber" placeholder="xxx-xxx-xxxx">
-													</div>
-												</div>
-												<div class="form-group">
-													<label for="email" class="col-sm-3 control-label" required>Email Address</label>
-													<div class="col-sm-9">
-														<input type="text" class="form-control email" id="email" placeholder="email@address.com">
-													</div>
-												</div>
-												<div class="form-group">
-													<label for="zipcode" class="col-sm-3 control-label" required>Zip Code</label>
-													<div class="col-sm-9">
-														<input type="text" class="form-control zipcode" id="zipcode" placeholder="zipcode">
-													</div>
-												</div>
-												<div class="form-group">
-													<label for="firstName" class="col-sm-3 control-label" required>Firstname</label>
-													<div class="col-sm-9">
-														<input type="text" class="form-control first-name" id="firstName" placeholder="Firstname">
-													</div>
-												</div>
-												<div class="form-group">
-													<label for="lastName" class="col-sm-3 control-label" required>Lastname</label>
-													<div class="col-sm-9">
-														<input type="text" class="form-control last-name" id="lastName" placeholder="Lastname">
-													</div>
-												</div>
-												<div class="form-group">
-													<label for="dob" class="col-sm-3 control-label">Date of Birth</label>
-													<div class="col-sm-9">
-														<input type="text" class="form-control d-o-b" id="dob" placeholder="mm/dd/yyyy">
-													</div>
-												</div>
-												<div class="form-group">
-													<label for="TobaccoUse" class="col-sm-3 control-label">Tobacco Use?</label>
-													<div class="col-sm-9">
-														<label class="radio-inline">
-															<input type="radio" name="smokeNo" id="inlineRadioYes" value="no"> No
-														</label>
-														<label class="radio-inline">
-															<input type="radio" name="smokeYes" id="inlineRadioNo" value="yes"> Yes
-														</label>
-													</div>
-												</div>
-											<div class="form-group">
-												<label for="Gender" class="col-sm-3 control-label">Gender</label>
-												<div class="col-sm-9">
-													<label class="radio-inline">
-														<input type="radio" name="genderMale" id="inlineRadioMale" value="Male"> Male
-													</label>
-													<label class="radio-inline">
-														<input type="radio" name="genderFemale" id="inlineRadioFemale" value="Female"> Female
-													</label>
-												</div>
-											</div>
-										</div>
-										</form>
-									</div>
-									<div class="modal-footer">
-										<button type="button" class="btn" id="addPerson">+ Add Family Member</button>
-										<button type="button" class="btn btn-primary" id="submitInfo">Submit</button>
-									</div>
-								</div>
-							</div>
-						</div>
-							<!-- End of Modal -->
+						<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" id="dropdownMenu1" aria-haspopup="true" aria-expanded="true">Get a FREE Quote <span class="hidden-sm">/ Enroll now &nbsp;</span><span class="caret"></span></button>
+						<ul class="dropdown-menu" id="free-quote-links" aria-labelledby="dropdownMenu1">
+							<div class="text-center">Choose your broker</div>
+							<li role="separator" class="divider"></li>
+							<li><a href="https://www.quotit.net/eproIFP/webPages/infoEntry/infoEntry.asp?license_no=F6H2NM">Colby Hatch</a></li>
+							<li><a href="https://www.quotit.net/eproIFP/webPages/infoEntry/infoEntry.asp?license_no=K4RXHM">Gary Hatch</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -156,7 +81,8 @@
 			<li><a href="about.html">About Us</a></li>
 			<li><a href="#" class="active">Services</a></li>
 			<li><a href="contact.html">Contact Us</a></li>
-			<li><a href="freequote.html">Free Quote</a></li>
+			<li><a href="https://www.quotit.net/eproIFP/webPages/infoEntry/infoEntry.asp?license_no=F6H2NM">Get Free Quote from Colby Hatch</a></li>
+			<li><a href="https://www.quotit.net/eproIFP/webPages/infoEntry/infoEntry.asp?license_no=K4RXHM">Get Free Quote from Gary Hatch</a></li>
 		</ul>
 	</div>
 	<section class="cta services-cta">

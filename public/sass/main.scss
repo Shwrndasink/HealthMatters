@@ -14,6 +14,12 @@ $large: "only screen and (max-width : 1200px)";
   width:100%;
 }
 .navbar {
+    @media #{$medium}{
+        .container{
+            width:100%;
+        }
+    }
+
   height:100px;
   background:#fff;
   margin:0 auto;
@@ -34,10 +40,21 @@ $large: "only screen and (max-width : 1200px)";
       }
     }
   }
-  .free-quote-button {
-    margin-right:40px;
-    margin-top:35px;
+
+}
+.free-quote-button {
+  margin-right:40px;
+  margin-top:35px;
+  position:relative;
+  @media #{$medium}{
+      position: absolute;
+      right:-15px;
   }
+}
+#free-quote-links {
+    ul {
+        margin:0;
+    }
 }
 .navbar-brand{
   padding-top:10px;
